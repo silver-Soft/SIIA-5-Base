@@ -66,26 +66,21 @@
     <ng-container *ngIf="!esDispositivoMovil && _loginUsuarioService.obtenerToken() && tienePrivilegio('TODO')">
         <button mat-button [matMenuTriggerFor]="serviciosUniversitarios" class="navButton"
             [class]="posSelectButton ==1? 'navButtonhover':'navButton'">
-            Boton primario
+            Servicios escolares
         </button>
 
         <mat-menu #serviciosUniversitarios="matMenu">
             <button [class]="posSelectButton ==1 && selectedSubButton == 1? 'bindButton':''" mat-menu-item
-                [matMenuTriggerFor]="btn_secundarios1" *ngIf="tienePrivilegio('TODO')">Boton secundario 1</button>
-            <button [class]="posSelectButton ==1 && selectedSubButton == 2? 'bindButton':''" mat-menu-item
-                [matMenuTriggerFor]="btn_secundarios2" *ngIf="tienePrivilegio('TODO')">Boton secundario 2</button>
-            <button [class]="posSelectButton ==1 && selectedSubButton == 3? 'bindButton':''" mat-menu-item
-                [matMenuTriggerFor]="btn_secundarios3" *ngIf="tienePrivilegio('TODO')">Boton secundario 3</button>
+                [matMenuTriggerFor]="btn_secundarios1" *ngIf="tienePrivilegio('TODO')">Carpeta electrónica de tutorías</button>            
         </mat-menu>
 
         <mat-menu #btn_secundarios1="matMenu">
-            <button mat-menu-item [routerLink]="['#']" (click)="bindSelected(1,1)" *ngIf="tienePrivilegio('TODO')">Boton
-                terciario 1</button>
-            <button mat-menu-item [routerLink]="['#']" (click)="bindSelected(1,1)" *ngIf="tienePrivilegio('TODO')">Boton
-                terciario 2</button>
+            <button mat-menu-item [routerLink]="['tutorias-riesgoAcademico']" (click)="bindSelected(1,1)" *ngIf="tienePrivilegio('TODO')">
+                Riesgo académico de tutorados
+            </button>
         </mat-menu>
 
-        <mat-menu #btn_secundarios2="matMenu">
+        <!--mat-menu #btn_secundarios2="matMenu">
             <button mat-menu-item *ngIf="tienePrivilegio('TODO')" [routerLink]="['#']"
                 (click)="bindSelected(1, 2)">Boton terciario 1
             </button>
@@ -98,11 +93,11 @@
             <button mat-menu-item *ngIf="tienePrivilegio('TODO')" [routerLink]="['#']"
                 (click)="bindSelected(1, 3)">Boton terciario 2
             </button>
-        </mat-menu>
+        </mat-menu-->
     </ng-container>
 
     <!--COMO NAVEGAR CON routerLink-->
-    <ng-container *ngIf="!esDispositivoMovil && _loginUsuarioService.obtenerToken() && tienePrivilegio('Servicios')">
+    <!--ng-container *ngIf="!esDispositivoMovil && _loginUsuarioService.obtenerToken() && tienePrivilegio('Servicios')">
         <button mat-button [matMenuTriggerFor]="servicios" class="navButton"
             [class]="posSelectButton ==2? 'navButtonhover':'navButton'">
             Servicios
@@ -112,7 +107,7 @@
                 [routerLink]="['#']" (click)="bindSelected(2,1)"
                 *ngIf="tienePrivilegio('SolicitarServicio')">Solicitar ticket de ayuda</button>
         </mat-menu>
-    </ng-container>
+    </ng-container-->
 
 
 </mat-toolbar>

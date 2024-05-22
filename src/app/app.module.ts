@@ -136,10 +136,7 @@ import { AvisosComponent } from './modules/componentes/modal-dialogs/home/avisos
     },{
       provide: LocationStrategy, 
       useClass: HashLocationStrategy
-    },{
-      provide: LocationStrategy, 
-      useClass: HashLocationStrategy
-    },
+    }
   ],
   bootstrap: [AppComponent],
   schemas: [    

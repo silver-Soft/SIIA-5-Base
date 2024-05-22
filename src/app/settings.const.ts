@@ -3,7 +3,8 @@ import { HttpHeaders } from '@angular/common/http';
 export class AppSettings {
 
     public static API_ENDPOINT = 'https://siiadsyti.uatx.mx:8743';
-    public static API_BASEURL_EXAMPLE = 'https://tudomino.uatx.mx:3443/siia';
+    public static API_ENDPOINT_AVISOS= 'https://siiadsyti.uatx.mx:8743/siia-back-avisos-0.0.1-SNAPSHOT'
+    public static API_ENDPOINT_TUTORIAS = 'https://siiadsyti.uatx.mx:8743/siia-back-tutorias-tesis-0.0.1-SNAPSHOT';
     
     public static TITLE = 'SIIA 5';
     public static SLOGAN = 'Sistema integral de información administrativa';
